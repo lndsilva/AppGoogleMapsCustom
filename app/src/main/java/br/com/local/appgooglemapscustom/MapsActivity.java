@@ -59,22 +59,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
 
-
         // Add a marker in Sydney and move the camera
-        LatLng etecia = new LatLng(-23.701185,-46.7001431);
+        LatLng etecia = new LatLng(-23.701185, -46.7001431);
         //-23.702723,-46.6898242
         //Marcadores
         mMap.addMarker(new MarkerOptions()
-                .position(etecia)
-                .title("Autodromo José Carlos Pace")
-                //.icon(BitmapDescriptorFactory.defaultMarker(
-                        //Definindo cores para os icones de posicionamento
-                        //BitmapDescriptorFactory.HUE_VIOLET))
+                        .position(etecia)
+                        .title("Autodromo José Carlos Pace")
+                        .icon(BitmapDescriptorFactory.defaultMarker(
+                                // Definindo cores para os icones de posicionamento
+                                BitmapDescriptorFactory.HUE_RED))
                 //Icone costumizado
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.formula))
+                //.icon(BitmapDescriptorFactory.fromResource(R.drawable.formula))
 
         );
         //Posicionamento da câmera
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(etecia,15));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(etecia, 18));
     }
 }
