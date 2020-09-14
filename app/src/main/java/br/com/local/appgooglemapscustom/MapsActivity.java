@@ -41,28 +41,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //Tipo de mapas
         /*
-        * Normal exibe a visualização padrão do mapa de estradas. Este é o tipo de mapa padrão.
-        * Satelite exibe imagens de satélite do Google Earth.
-        * Hybrid exibe uma mistura de visualizações normais e de satélite.
-        * Terrain exibe um mapa físico com base nas informações do terreno.
-        * */
+        Normal
+            Mapa rodoviário comum. Mostra vias, alguns elementos criados pelo homem e
+            recursos naturais importantes, como rios. Etiquetas de estradas e de elementos
+             também são visíveis.
+        Híbrido
+            Dados de fotografia de satélite com mapas rodoviários. Etiquetas de estradas
+             e de elementos também são visíveis.
+        Satélite
+            Dados de fotografia de satélite. Marcadores de estradas e de elementos não são visíveis.
+        Relevo
+            Dados topográficos. O mapa inclui cores, curvas de nível e etiquetas, além de sombreamento
+             de perspectiva. Algumas vias e etiquetas também são visíveis.
+        Nenhum
+            Nenhum bloco. O mapa será renderizado como uma grade vazia, sem carregar blocos.
+        */
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
 
 
         // Add a marker in Sydney and move the camera
-        LatLng etecia = new LatLng(-23.702723, -46.6898242);
+        LatLng etecia = new LatLng(-23.701185,-46.7001431);
         //-23.702723,-46.6898242
         //Marcadores
         mMap.addMarker(new MarkerOptions()
                 .position(etecia)
-                .title("Etec Irmã Agostina")
-                /*.icon(BitmapDescriptorFactory.defaultMarker(
+                .title("Autodromo José Carlos Pace")
+                //.icon(BitmapDescriptorFactory.defaultMarker(
                         //Definindo cores para os icones de posicionamento
-                        BitmapDescriptorFactory.HUE_VIOLET
-                ))*/
+                        //BitmapDescriptorFactory.HUE_VIOLET))
                 //Icone costumizado
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.escola))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.formula))
 
         );
         //Posicionamento da câmera
